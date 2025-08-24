@@ -3,10 +3,9 @@
 
 ## Python Packaging
 
-- [uv Tutorial](https://python-basics-tutorial.readthedocs.io/en/latest/libs/distribution.html#uv)
+- [uv Tutorial](https://python-basics-tutorial.readthedocs.io/en/latest/libs/install.html#uv)
 - [Modules](https://python-basics-tutorial.readthedocs.io/en/latest/modules/index.html)
 - [Libraries](https://python-basics-tutorial.readthedocs.io/en/latest/libs/index.html)
-- [Logging](https://www.academis.eu/advanced_python/error_handling/logging.html)
 - [Packaging](https://python-basics-tutorial.readthedocs.io/en/latest/packs/index.html)
 - [Namespace Packages](https://packaging.python.org/en/latest/guides/packaging-namespace-packages/)
 
@@ -22,3 +21,7 @@
 - [Using Slots](https://wiki.python.org/moin/UsingSlots)
 - [Video: Pythonic objects](https://www.youtube.com/watch?v=k55d3ZUF3ZQ)
 - [Video: Descriptors and Metaclasses](https://www.youtube.com/watch?v=7PzeZQGVPKc)
+
+## Misc
+
+- [Logging](https://www.academis.eu/advanced_python/error_handling/logging.html)

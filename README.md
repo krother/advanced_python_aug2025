@@ -8,7 +8,7 @@ This repository will be maintained until July 2026. After that, you will find eq
 ### Day 1: Object-Oriented Programming
 
 * [Creating a Python Package](python_package/README.md)
-* [5 ways to create classes in Python](object_orientation/class_types.md)
+* [5 ways to create classes](object_orientation/class_types/README.md)
 * [Special methods in Python](object_orientation/special_methods.md)
 * [Properties, classmethods and staticmethods](object_orientation/properties.md)
 * [Abstract Superclass](object_orientation/abc.md)
