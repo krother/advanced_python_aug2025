@@ -26,7 +26,8 @@ Check what files have been created.
 
 ## 3. pyproject.toml
 
-The file [pyproject.toml](pyproject.toml) creates everything to package the project.
+Download the file [pyproject.toml](pyproject.toml).
+It contains instructions to install and package the project.
 Inspect the file and clarify its contents.
 
 ## 4. Install libraries
@@ -38,6 +39,8 @@ Install the dependencies listed in `pyproject.toml`:
 
 The development libraries are installed by default.
 
+You should see a `venv/` folder that contains the installed libraries.
+
 ## 5. Add source code
 
 Add a folder `pac/` below the folder containing `pyproject.toml`
@@ -46,15 +49,24 @@ Download and add the following two files:
 * [pac_game.py](pac_game.py)
 * [tiles.png](tiles.png)
 
+Also create a folder `tests/` that we will use later.
+
 ## 6. Execute code
 
 Now the program is ready to be executed:
 
-    uv run python pac/pac_game.py
+    uv run pac/pac_game.py
 
-Also using the `[project.scripts]` configuration:
+Also can also use the configuration in `[project.scripts]`:
+
+    uv run pacm
+
+Or use the file [__main__.py](__main__.py) and run the python package name:
 
     uv run pac
+
+In all three cases, you should see a graphical window with some starter setup pop up.
+
 
 ## 7. Release the package
 
@@ -68,7 +80,7 @@ If you want to release the sources only, use:
 
     uv build --sdist
 
-## 7. Install the package
+## 8. Install the package
 
 The newly created package can be installed with ``pip`` from the release wheel:
 
