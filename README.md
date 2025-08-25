@@ -16,7 +16,7 @@ This repository will be maintained until July 2026. After that, you will find eq
 ### Day 2: Function Patterns / Testing
 
 * [Draw the Level](draw_the_level.md)
-* [Decorator Functions](functional_patterns/decorators.md)
+* [Decorator Classes](functional_patterns/decorators.md)
 * [Decorator Exercise](functional_patterns/decorator_exercise.md)
 * [Generator Functions](functional_patterns/generators.md)
 * [Generator Exercise](functional_patterns/generator_exercise.md)

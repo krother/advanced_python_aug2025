@@ -113,8 +113,8 @@ print(next(squares))
 Iterators
 ---------
 
-The thing returned by a generator is called an **iterator**. Many
-functions in Python return iterators (e.g. `range()`, `enumerate()` and
+A generator is a special type of  **iterator**.
+Many Python functions also return iterators (e.g. `range()`, `enumerate()` and
 `zip()`).
 
 Among the things you can do to iterators are:

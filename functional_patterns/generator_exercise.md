@@ -19,7 +19,7 @@ Follow these steps:
 ## 3. Ghost Movement
 
 Write a generator function `random_moves()` that produces an endless sequence of random directions using `yield`. 
-Make the code in `ghost_move.py` work.
+Make the code in [ghost_move.py](ghost_move.py) work.
 
 **The lines are complete and correct, but the order is wrong and indentation is missing.**
 
