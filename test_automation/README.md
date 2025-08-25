@@ -1,69 +1,70 @@
 
-# Testing
+# Test Automation
 
-## 1. Running Tests
+## 1. Automated Tests
 
-Run the tests for the `space_game` package:
+In [test_words.py](test_words.py) you find an examples of:
+
+- a simple test with pytest
+- a test against an Exception
+- a test with a fixture
+- a parametrized test
+
+Run the tests with
+
+  uv run pytest
+
+Make the tests work by implementing a `word_count()` function.
+
+## 2. Write Tests
+
+Write a test function `test_eat()` in a file `test_pac_game.py` against the following scenario:
+
+- there is a small level with lots of empty space.
+- the pac is in the top left corner (0/0)
+- the pac is facing right
+- the pac moves
+- check the new position of the pac, it should now be (1/0) 
+
+Run the test with:
+
+    uv run pytest
+
+Make sure the test works.
+
+## 3. Eating Dots
+
+Write another test against this scenario:
+
+- there is a small level full of dots.
+- the pac is in the top left corner
+- the pac is facing right
+- the pac moves
+- it eats a dot and gets a point
+- the dot disappears from the map
+
+## 4. Test options
+
+Run the tests with the following command:
 
   uv run pytest -v -x -s --cov
 
 Explain the options.
 
-if the gui tests do not work, use
+## 5. Fixture
 
-  uv run pytest --ignore tests/test_space.py
+Move the creation of the game data for testing into a fixture.
 
-## 2. Pytest
+## 6. Conftest
 
-Examine the tests in `test_space.py`
-
-## 3. Unittest
-
-Compare the test in `test_pi.py`
-
-## 4. Mocking
-
-Examine the test in `test_cli.py` and how the keyboard input is avoided.
-
-Also compare the code in `mock_example.py`
-Both tests contain a **context manager**.
-
-## 5. Test Parametrization
-
-In `test_words.py` you find an example of test parameterization and testing against an error.
-Make the tests work.
-
-## 6. Fixtures
-
-Move the fixture in `space_game.py` to a file `conftest.py`.
+Move the fixture in `test_pac_game.py` to a file `conftest.py`.
 Discuss the scope of fixtures (session, module, class, test).
 
-## 7. Test data
+## 7. Mocking
 
-Examine the folder structure in `tests/test_data/` . Discuss pros and cons.
+Also compare the code in [mock_example.py](mock_example.py)
+Discuss what a **context manager** is.
 
-# 8. Playwright: Web front-end testing
-
-Remote-control your browser. Run from the command line:
-
-    pip install playwright
-    playwright install
-
-Generate test code with
-
-    playwright codegen www.wikipedia.org
-
-Before closing the browser, copy the generated code.
-To run it, add imports:
-
-    import playwright
-    from playwright.sync_api import sync_playwright, Playwright
-
-before closing the context, add:
-
-    page.screenshot(path="screenshot.png")
-
-Execute the code with Python.
 
 ## Links
 

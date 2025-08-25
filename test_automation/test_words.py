@@ -1,13 +1,5 @@
-"""
-tests for the word_counter
 
-run with:
-
-    pytest
-"""
 import pytest
-
-# TODO: make all tests work
 
 #
 # straightforward test

@@ -15,11 +15,13 @@ This repository will be maintained until July 2026. After that, you will find eq
 
 ### Day 2: Function Patterns / Testing
 
-* [Decorator Classes](functional_patterns/decorators.md)
+* [Draw the Level](draw_the_level.md)
+* [Decorator Functions](functional_patterns/decorators.md)
+* [Decorator Exercise](functional_patterns/decorator_exercise.md)
 * [Generator Functions](functional_patterns/generators.md)
-* functional programming patterns in Python
-* Test automation
-* Static Code checkers
+* [Generator Exercise](functional_patterns/generator_exercise.md)
+* [Test automation](test_automation/README.md)
+* [Static Code checkers](static_checks/code_checks.md)
 
 ### Day 3: Design Patterns
 
