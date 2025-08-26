@@ -1,6 +1,21 @@
 
 # Top 10 Resources
 
+## Top 10 Data Science Technologies
+
+(implementing important patterns)
+
+* polars
+* MongoDB
+* Elasticsearch
+* DuckDB
+* Qdrant / Milvus
+* Narwhals
+* dbt
+* Parquet
+* Apache Arrow
+* Apache Iceberg
+
 ## Top 10 Development Tools
 
 * VS Code

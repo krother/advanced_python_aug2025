@@ -29,6 +29,8 @@ This repository will be maintained until July 2026. After that, you will find eq
 * SOLID principles in practice
 * Design Patterns in Python
 
+* [Profiling](profiling/README.md)
+
 ## Further Reading
 
 * [Top 10 lists](top10.md)
