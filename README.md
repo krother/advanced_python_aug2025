@@ -19,16 +19,18 @@ This repository will be maintained until July 2026. After that, you will find eq
 * [Decorator Classes](functional_patterns/decorators.md)
 * [Decorator Exercise](functional_patterns/decorator_exercise.md)
 * [Generator Functions](functional_patterns/generators.md)
-* [Generator Exercise](functional_patterns/generator_exercise.md)
 * [Test automation](test_automation/README.md)
 * [Static Code checkers](static_checks/code_checks.md)
 
 ### Day 3: Design Patterns
 
-* refactoring
-* SOLID principles in practice
-* Design Patterns in Python
-
+* [Debugging](debugging/README.md)
+* [Generator Exercise](functional_patterns/generator_exercise.md)
+* [Object-Orientation principles](object_orientation/README.md)
+* [Design Patterns](design_patterns/README.md)
+* [Refactoring](refactoring/README.md)
+* [Versioning](versioning/README.md)
+* [Documentation with Sphinx](https://python-basics-tutorial.readthedocs.io/en/latest/document/sphinx/index.html) - by Veit Schiele
 * [Profiling](profiling/README.md)
 
 ## Further Reading

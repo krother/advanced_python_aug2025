@@ -21,29 +21,36 @@ If you want to **add the timestamp feature to many functions**, consider
 using a decorator:
 
 ``` {.sourceCode .python3}
+import time
+from typing import Callable
+
+
 class Timestamp:
 
     def __init__(self, message):
-        self.message = message
-        self.function = None
+        self.message: str = message
+        self.function: Callable = None
 
-    def __call__(self, func):
+    def __call__(self, func) -> Callable:
+        """called by @ operator with fibonacci as an argument"""
         self.function = func
         return self.print_timestamp
 
     def print_timestamp(self, *args, **kwargs):
         print(time.asctime())            # done before addition
-        result = func(*args, **kwargs)   # calls the addition function
-        print(self.message)              # actions after addition
+        result = self.function(*args, **kwargs)   # calls the addition function
+        print(self.message, result)              # actions after addition
         return result
 
 
-@Timestamp("Fibonacci function called")
+@Timestamp("Fibonacci call resulted in:")
 def fibonacci(n):
     """Recursively calculates fibonacci numbers"""
     if n < 2:
         return n
     return fibonacci(n-1) + fibonacci(n-2)
+
+print(fibonacci(4))
 ```
 
 You can argue that this does not simplify the code. Decorators pays off
