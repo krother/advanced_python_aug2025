@@ -7,7 +7,7 @@ import cv2
 import numpy as np
 
 from pac.vector import Vector
-from pac.pac_classes import Pac, Ghost, Level, PacGame
+from pac.pac_classes import Pac, Ghost, Level, PacGame, RandomMoveStrategy, LeftRightMoveStrategy
 from pac.config import TILE_FILE, WINDOW_TITLE, SCREEN_SIZE_X, SCREEN_SIZE_Y, MOVES, TILE_NAMES, TILE_SIZE
 from pac.util import ticker
 
@@ -74,6 +74,15 @@ def draw(game: PacGame) -> None:
         y=game.player.position.y,
         tile="player",
     )
+    # draw ghosts
+    for g in game.ghosts:
+        draw_tile(
+            frame=frame,
+            x=g.position.x,
+            y=g.position.y,
+            tile="ghost_" + g.color,
+        )
+
     cv2.imshow(WINDOW_TITLE, frame)  # display complete image
 
 
@@ -91,10 +100,21 @@ def main():
     game = PacGame(
         player=Pac(
             direction=Vector(0, 0),
-            position=Vector(2, 2),
+            position=Vector(1, 1),
             score=0,
         ),
-        ghosts=[],
+        ghosts=[
+            Ghost(direction=Vector(1, 0),
+                  position=Vector(10, 1),
+                  color="red",
+                  move_strategy=RandomMoveStrategy()
+                  ),
+            Ghost(direction=Vector(1, 0),
+                  position=Vector(1, 9),
+                  color="blue",
+                  move_strategy=LeftRightMoveStrategy()
+                  ),
+        ],
         level=Level(
             level="""
     #################
@@ -116,6 +136,8 @@ def main():
         handle_keyboard(game)
         if next(t):
             game.player.move(game)  # SHOULD IT LOOK LIKE THIS???
+            for g in game.ghosts:
+                g.move(game)
 
     cv2.destroyAllWindows()
 
