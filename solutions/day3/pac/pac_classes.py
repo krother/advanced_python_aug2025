@@ -46,6 +46,9 @@ class MoveStrategy(ABC):
     def get_next_direction(self) -> Vector:
         pass
 
+    def __repr__(self):
+        return self.__class__.__name__
+
 
 class RandomMoveStrategy(MoveStrategy):
 
